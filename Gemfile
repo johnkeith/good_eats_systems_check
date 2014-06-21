@@ -37,7 +37,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'haml-rails'
 
 group :test, :development do
   gem 'rspec-rails'

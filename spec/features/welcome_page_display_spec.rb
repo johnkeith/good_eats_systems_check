@@ -5,6 +5,6 @@ feature "user navigates to home page" do
     visit '/'
     expect(page).to have_content("Recent Good Eats")
     # trying to target data html attribute to be dynamically on first page
-    expect(page).to have_css("a.recent_reviews[data-row=10]")
+    expect(page).to have_css("a.recent_restaurants[data-row=10]")
   end
 end

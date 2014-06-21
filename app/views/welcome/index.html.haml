@@ -1,0 +1,5 @@
+%h1 Recent Good Eats
+%ul
+  - @recent_restaurants.each_with_index do |rest, index|
+    = "<li class='recent_restaurants' data-row='#{index}'>#{rest.name}</li>"
+
