@@ -6,4 +6,23 @@
 %p= @restaurant.description
 %p= @restaurant.catagory
 
-= link_to "Back to Restaurants", restaurants_path
+%h1= "Reviews for " + @restaurant.name
+
+%ul
+- @reviews.each do |review|
+  %li= review.body
+  %li= review.rating
+
+%h3 Write a review for this restaurant
+
+= form_for [@restaurant, @review] do |f|
+  = f.label :rating
+  = f.select :rating, options_for_select([["1", 1],["2", 2],["3", 3],["4", 4],["5", 5]])
+
+  = f.label :body
+  = f.text_area :body
+
+  = f.submit "Add Review"
+
+= link_to "Back to Restaurants Index", restaurants_path
+
