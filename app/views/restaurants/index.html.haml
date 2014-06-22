@@ -1,5 +1,7 @@
 %h1 All Restaurants
 %ul{:class => "restaurant-list"}
   - @restaurants.each_with_index do |rest|
-    %li{:class => ""}= rest.name
+    %li{:class => ""}
+      %a{:href => "/restaurants/#{rest.id}"}= rest.name
 = will_paginate @restaurants
+= link_to "Back to Welcome page", controller: "welcome", action: "index"

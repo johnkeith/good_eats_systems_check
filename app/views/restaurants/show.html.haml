@@ -1,0 +1,9 @@
+%h1= "Information about " + @restaurant.name
+
+%p= @restaurant.address
+%p= @restaurant.city
+%p= @restaurant.zipcode
+%p= @restaurant.description
+%p= @restaurant.catagory
+
+= link_to "Back to Restaurants", restaurants_path
