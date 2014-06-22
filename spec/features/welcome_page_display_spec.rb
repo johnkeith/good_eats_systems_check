@@ -14,8 +14,8 @@ feature "user navigates to home page" do
     expect(page).to have_css("li", :count => 10)
   end
 
-  # scenario "root shows link to full restaurants list" do
-  #   visit '/'
-  #   expect(page).to have_link("Show full list of restaurants", :href => "/restaurants")
-  # end
+  scenario "root shows link to full restaurants list" do
+    visit '/'
+    expect(page).to have_link("Show full list of restaurants", :href => "/restaurants")
+  end
 end
