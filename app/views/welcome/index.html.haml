@@ -1,5 +1,6 @@
 %h1 Recent Good Eats
 %ul
   - @recent_restaurants.each_with_index do |rest, index|
-    = "<li class='recent_restaurants' data-row='#{index}'>#{rest.name}</li>"
-
+    / = "<li class='recent_restaurants' data-row='#{index}'>#{rest.name}</li>"
+    %li{:class => "recent-restaurant", "data-row".to_sym => "#{index}"}= rest.name
+/ = link_to "Show full list of restaurants", restaurants_path
