@@ -24,6 +24,5 @@ feature "user visits show page for specific restaurant" do
   end
 
   scenario "and sees reviews for restaurant" do
-    
   end
 end
