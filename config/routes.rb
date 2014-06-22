@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
 
-  resources :restaurants, only: [:index]
+  resources :restaurants, only: [:index, :new]
   resources :restaurants do
-    resources :reviews, only: :create
+    resources :reviews, only: :new
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -26,7 +26,7 @@ feature "user sees a list of all restaurants" do
     populate_restaurants_table
 
     visit '/restaurants'
-    
+
     expect(page).to have_link("Next →")
   end
 end

@@ -4,12 +4,12 @@ feature "user may add new restaurants to the database" do
   scenario "user correctly fills in form for new restaurant" do
     visit '/restaurants/new'
     
-    fill_in 'restaurant[name]', with: 'Kimbap Heaven'
-    fill_in 'restaurant[address]', with: '123 S.K. St.'
-    fill_in 'restaurant[city]', with: 'Boston'
-    fill_in 'restaurant[zipcode]', with: '12345'
-    fill_in 'restaurant[description]', with: "Rolls!"
-    fill_in 'restaurant[catagory]', with: "Korean"
+    fill_in 'Name', with: 'Kimbap Heaven'
+    fill_in 'Address', with: '123 S.K. St.'
+    fill_in 'City', with: 'Boston'
+    fill_in 'Zipcode', with: '12345'
+    fill_in 'Description', with: "Rolls!"
+    fill_in 'Catagory', with: "Korean"
 
     click_button("Add Restaurant")
 
@@ -19,15 +19,16 @@ feature "user may add new restaurants to the database" do
   scenario "user incorrectly fills in form for new restaurant" do
     visit '/restaurants/new'
     
-    fill_in 'restaurant[name]', with: 'Kimbap Heaven'
-    fill_in 'restaurant[address]', with: '123 S.K. St.'
+    fill_in 'Name', with: 'Kalbi Heaven'
+    fill_in 'Address', with: '123 S.K. St.'
 
-    fill_in 'restaurant[zipcode]', with: '12345'
-    fill_in 'restaurant[description]', with: "Rolls!"
-    fill_in 'restaurant[catagory]', with: "Korean"
+    fill_in 'Zipcode', with: '12345'
+    fill_in 'Description', with: "Meat!"
+    fill_in 'Catagory', with: "Korean"
 
     click_button("Add Restaurant")
 
-    expect(page).not_to have_content("Kimbap Heaven")
+    expect(page).not_to have_content("Kalbi Heaven")
+    expect(page).to have_content("Your submission was invalid!")
   end
 end

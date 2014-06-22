@@ -4,6 +4,24 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-    @review = Restaurant.new
+    @restaurant = Restaurant.new
+  end
+
+  def create
+    @restaurant = Restaurant.new(restaurant_params)
+
+    if @restaurant.save
+      redirect_to '/restaurants'
+    else
+      flash[:notice] = "Your submission was invalid!"
+      render :new
+    end
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :address, :city, 
+                                       :zipcode, :description, :catagory)
   end
 end

@@ -160,7 +160,16 @@ module RestaurantSeedData
         zipcode: "12345",
         description: "Milkshakes!",
         catagory: "Quick Eats"
+      },
+          {
+        name: "Restaurant 21", 
+        address: "123 Road",
+        city: "Boston", 
+        zipcode: "12345",
+        description: "Milkshakes!",
+        catagory: "Quick Eats"
       }
+
     ]
 
     restaurants.each do |restaurant|
