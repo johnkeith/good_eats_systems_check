@@ -11,18 +11,19 @@ feature "user visits show page for specific restaurant" do
     expect(page).to have_content("Information about")
   end
 
-  # scenario "and sees info for restaurant" do
-  #   populate_restaurants_table
-
-  #   visit '/restaurants/1'
+  scenario "and sees info for restaurant" do
+    populate_restaurants_table
     
-  #   @restaurant = Restaurant.find(1)
+    @restaurant = Restaurant.first
+    
+    visit "/restaurants/#{@restaurant.id}"
+    
+    expect(page).to have_content("#{@restaurant.name}")
+    expect(page).to have_content("#{@restaurant.description}")
+    expect(page).to have_content("#{@restaurant.catagory}")
+  end
 
-  #   expect(page).to have_content("#{@restaurant.name}")
-  #   expect(page).to have_content("#{@restaurant.description}")
-  #   expect(page).to have_content("#{@restaurant.catagory}")
-  # end
-
-  # scenario "and sees reviews for restaurant" do
-  # end
+  scenario "and sees reviews for restaurant" do
+    
+  end
 end
