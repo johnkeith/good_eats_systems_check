@@ -12,3 +12,21 @@ feature "user navigates to index of restaurants" do
     expect(page).to have_content("All Restaurants")
   end
 end
+
+feature "user sees a list of all restaurants" do
+  scenario "user arrives at restaurants_path and sees links to each restaurant" do
+    populate_restaurants_table
+
+    visit '/restaurants'
+    
+    expect(page).to have_css("li", :count => 20)
+  end
+
+  scenario "user may see more restaurants by clicking pagination links" do
+    populate_restaurants_table
+
+    visit '/restaurants'
+    
+    expect(page).to have_link("Next →")
+  end
+end

@@ -86,7 +86,88 @@ restaurants = [
     zipcode: "12345",
     description: "Milkshakes!",
     catagory: "Quick Eats"
+  },
+  {
+    name: "Restaurant 11", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+    {
+    name: "Restaurant 12", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+    {
+    name: "Restaurant 13", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+    {
+    name: "Restaurant 14", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+    {
+    name: "Restaurant 15", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+    {
+    name: "Restaurant 16", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+      {
+    name: "Restaurant 17", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+      {
+    name: "Restaurant 18", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+      {
+    name: "Restaurant 19", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
+  },
+      {
+    name: "Restaurant 20", 
+    address: "123 Road",
+    city: "Boston", 
+    zipcode: "12345",
+    description: "Milkshakes!",
+    catagory: "Quick Eats"
   }
+
 ]
 
 restaurants.each do |restaurant|
